@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffeb3b;
+            color: #3f51b5;
+            text-align: center;
+            padding: 50px;
+            transition: background-color 0.5s;
+        }
+        h1 {
+            color: #e91e63;
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .question {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        .final-message {
+            display: none;
+            font-size: 24px;
+            color: #ff5722;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Birthday Quiz</h1>
+    <div id="question1" class="question active">
+        <p>1. Who is more beautiful than the Moon?</p>
+        <button onclick="nextQuestion(2)">Mannat Dua</button>
+        <button onclick="nextQuestion(2)">Dua Mannat</button>
+        <button onclick="nextQuestion(2)">MANNAT DUA</button>
+        <button onclick="nextQuestion(2)">DUA MANNAT</button>
+    </div>
+    <div id="question2" class="question">
+        <p>2. Who is the nuts and bolts of India's trade economy?</p>
+        <button onclick="nextQuestion(3)">Prasit</button>
+        <button onclick="nextQuestion(3)">PRASIT</button>
+        <button onclick="nextQuestion(3)">OP Prasit</button>
+        <button onclick="nextQuestion(3)">Prasit OP</button>
+    </div>
+    <div id="question3" class="question">
+        <p>3. What is your most favorite nickname?</p>
+        <button onclick="nextQuestion(4)">Golgappa</button>
+        <button onclick="nextQuestion(4)">golgappi</button>
+        <button onclick="nextQuestion(4)">golgappe</button>
+        <button onclick="nextQuestion(4)">golgappers</button>
+    </div>
+    <div id="question4" class="question">
+        <p>4. Who do you miss the most?</p>
+        <button onclick="nextQuestion(5)">Natasha</button>
+        <button onclick="nextQuestion(5)">NATASHA</button>
+        <button onclick="nextQuestion(5)">nataSHA</button>
+        <button onclick="nextQuestion(5)">NATAsha</button>
+    </div>
+    <div id="question5" class="question">
+        <p>5. Select your most favorite person on Earth:</p>
+        <button onclick="showFinalMessage()">Daler</button>
+        <button onclick="showFinalMessage()">Mehndi</button>
+        <button onclick="showFinalMessage()">Daler Mehndi</button>
+        <button onclick="showFinalMessage()">Mehndi Daler</button>
+    </div>
+    <div class="final-message" id="finalMessage">
+        <p>HAPPY BIRTHDAY MELLOW!</p>
+        <img src="https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/7558147/cCeRsgwwQulqToYh.jpg?Expires=1729927884&Signature=CKZBaNDtc1MPhG5s6xdPLbBmjhJ9yLTQVo~EIJ5IkB4xkx1FZOLoEROokYSxkFPFixFjQVoXeRXXJkKD044vMeOA9tWS0RZ0jj0D3SZLBOpLJfI73vg8Ae~h4liKwoY754nbxHQTfgtIHB01ob15LKn~BdBEBipZggrtHq0wACMAlsna7gcwmdEJKWdNgkSZh~3ezn-jofv8N~U7vREZSBUc0Jxnjp4XQGMdoKGlKxw~RYIgeUM9YNTsugbK0WL0mRJY8ck6qy9NDafcBoXW7hq5-1E2j6xHk8gKTkKmK0XoHVeQoImy3Cql-peaN-DBg9FlEDajY1v1NJU7NZ7B-Q__&Key-Pair-Id=K3USGZIKWMDCSX" alt="Rick Astley">
+    </div>
+    <script>
+        function nextQuestion(questionNumber) {
+            document.querySelector('.active').classList.remove('active');
+            document.getElementById('question' + questionNumber).classList.add('active');
+        }
+
+        function showFinalMessage() {
+            document.querySelector('.active').classList.remove('active');
+            document.getElementById('finalMessage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
